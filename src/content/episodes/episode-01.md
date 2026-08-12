@@ -1,7 +1,7 @@
 ---
 episode: 1
 date: 2026-08-09
-intro: "I've been digging out albums and tracks for years, and I'm obsessed with all genres. Then it turns out that my playlist of liked music is overloaded. I barely share my good finds or listenings on social media, but one day, the idea of setting up an online listening room came up. It's clean and easy to feature my weekly music discovery, particularly my fav tracks. I consider this a cyberspace euphony journaling - well, it might be fuzzy and glitchy sometimes - at least good things hype me up. Stay tuned"
+intro: "I've been digging out albums and tracks for years, and I'm obsessed with all genres. Then it turns out that my playlist of liked music is overloaded. I barely share my good finds or listenings on social media, but one day, the idea of setting up an online listening room came up. It's clean and easy to feature my weekly music discovery, particularly my fav tracks. I consider this a cyberspace euphony journaling - well, it might be fuzzy and glitchy sometimes - at least good things hype me up."
 picks:
   - artist: "Topdown Dialectic"
     release: "False LP A - 06"

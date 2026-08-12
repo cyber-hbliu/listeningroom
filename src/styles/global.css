@@ -270,7 +270,11 @@ h1, h2, h3 {
   flex: none;
 }
 .out-link:hover { background: var(--pink); color: var(--ink); }
-
+.pick-caption {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin: 0 0 0.3rem;
+}
 .pick-side {
   display: flex;
   flex-direction: row;

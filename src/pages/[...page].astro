@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import Player from '../components/Player.astro';
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const episodes = (await getCollection('episodes')).sort(
+    (a, b) => b.data.episode - a.data.episode
+  );
+  return paginate(episodes, { pageSize: 6 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'numeric', day: '2-digit', year: 'numeric' });
+---
+<Base>
+  <div class="wrap">
+    {page.data.map((ep) => (
+      <article class="episode" aria-labelledby={`ep-${ep.data.episode}`}>
+        <header class="section-head">
+          <span class="shape circle red" aria-hidden="true"></span>
+          <h2 id={`ep-${ep.data.episode}`} class="ep-title">
+            Episode {ep.data.episode} - {fmt(ep.data.date)}
+          </h2>
+        </header>
+        <p class="lede">{ep.data.intro}</p>
+
+        {ep.data.picks.map((pick) => (
+          <div class="pick">
+            {pick.note && <p class="pick-note">{pick.note}</p>}
+            <div class="pick-row">
+              <div class="pick-embed">
+                <Player
+                  platform={pick.platform}
+                  embedId={pick.embedId}
+                  artist={pick.artist}
+                  release={pick.release}
+                />
+              </div>
+              <a
+                class="out-link"
+                href={pick.link}
+                aria-label={`Open ${pick.artist}, ${pick.release} on ${pick.platform}`}
+              >↗</a>
+            </div>
+          </div>
+        ))}
+      </article>
+    ))}
+
+    <nav class="pager" aria-label="Episodes pagination">
+      {page.url.next && <a href={page.url.next}>← Older episodes</a>}
+      {page.url.prev && <a href={page.url.prev}>Newer episodes →</a>}
+    </nav>
+  </div>
+</Base>

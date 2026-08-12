@@ -1,0 +1,30 @@
+---
+/**
+ * Direct embed, lazy-loaded natively. The visible track info comes from
+ * the embed itself; artist/release feed the iframe title for screen readers.
+ */
+interface Props {
+  platform: 'bandcamp' | 'soundcloud' | 'spotify';
+  embedId: string;
+  artist: string;
+  release: string;
+}
+const { platform, embedId, artist, release } = Astro.props;
+
+const src =
+  platform === 'bandcamp'
+    ? `https://bandcamp.com/EmbeddedPlayer/${embedId}/size=large/bgcol=f3eee3/linkcol=2140be/artwork=small/transparent=true/`
+    : platform === 'soundcloud'
+      ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(embedId)}&color=%23e13d2b&show_teaser=false`
+      : `https://open.spotify.com/embed/${embedId}?theme=0`;
+
+const height =
+  platform === 'bandcamp' ? 120 : platform === 'soundcloud' ? 166 : 152;
+---
+<iframe
+  src={src}
+  height={height}
+  loading="lazy"
+  title={`${artist} — ${release} (${platform} player)`}
+  allow="autoplay; encrypted-media"
+></iframe>

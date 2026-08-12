@@ -26,4 +26,10 @@ picks:
     platform: soundcloud
     embedId: "https://soundcloud.com/lailafrance/the-pink-song"
     link: "https://soundcloud.com/lailafrance/the-pink-song"
+  - artist: "Toshiyuki Tsuchitori - Ryuichi Sakamoto"
+    release: "綾 (Aya)"
+    year: 2026
+    platform: bandcamp
+    embedId: "https://wewantsounds.bandcamp.com/track/aya"
+    link: "https://wewantsounds.bandcamp.com/track/aya"
 ---

@@ -21,14 +21,9 @@ picks:
     platform: bandcamp
     embedId: "album=2186648450/tracklist=false/track=1015153358"
     link: "https://tenggerggb.bandcamp.com/album/sky"
-  - artist: "FILL IN ARTIST"
-    release: "Bird of Beauty"
-    platform: apple
-    embedId: "jp/song/bird-of-beauty/1669142589"
-    link: "https://music.apple.com/jp/song/bird-of-beauty/1669142589"
-  - artist: "FILL IN ARTIST"
+  - artist: "Laila France"
     release: "The Pink Song"
-    platform: apple
-    embedId: "au/song/the-pink-song/202953893"
-    link: "https://music.apple.com/au/song/the-pink-song/202953893"
+    platform: soundcloud
+    embedId: "https://soundcloud.com/lailafrance/the-pink-song"
+    link: "https://soundcloud.com/lailafrance/the-pink-song"
 ---

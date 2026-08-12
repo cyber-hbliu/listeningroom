@@ -1,15 +1,9 @@
 ---
 episode: 1
 date: 2026-08-09
-<<<<<<< HEAD
-intro: "Write your intro here."
-picks:
-  - artist: "TENGGER"
-=======
 intro: "I've been digging out albums and tracks for years, and I'm obsessed with all genres. Then it turns out that my playlist of liked music is overloaded. I barely share my good finds or listenings on social media, but one day, the idea of setting up an online listening room came up. It's clean and easy to feature my weekly music discovery, particularly my fav tracks. I consider this a cyberspace euphony journaling - well, it might be fuzzy and glitchy sometimes - at least good things hype me up. Stay tuned"
 picks:
-- artist: "TENGGER"
->>>>>>> c4e8a0ddd418d667f5a029aa1f96709e7bc42def
+  - artist: "TENGGER"
     release: "Sky"
     year: 2026
     platform: bandcamp

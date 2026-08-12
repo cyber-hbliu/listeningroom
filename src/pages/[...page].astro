@@ -26,7 +26,9 @@ const fmt = (d: Date) =>
           </h2>
         </header>
         <p class="lede">{ep.data.intro}</p>
-
+{pick.platform === 'soundcloud' && (
+  <p class="pick-caption">{pick.artist} — {pick.release}</p>
+)}
         {ep.data.picks.map((pick) => (
           <div class="pick">
             <div class="pick-row">

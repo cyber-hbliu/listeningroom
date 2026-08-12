@@ -1,7 +1,8 @@
 ---
 /**
- * Direct embed, lazy-loaded natively. The visible track info comes from
- * the embed itself; artist/release feed the iframe title for screen readers.
+ * Direct embed, lazy-loaded natively. Slim variants: bandcamp 42px,
+ * soundcloud 20px mini bar, spotify 80px compact, apple 175px (no
+ * smaller variant exists). Artist/release feed the iframe title.
  */
 interface Props {
   platform: 'bandcamp' | 'soundcloud' | 'spotify' | 'apple';
@@ -13,20 +14,20 @@ const { platform, embedId, artist, release } = Astro.props;
 
 const src =
   platform === 'bandcamp'
-    ? `https://bandcamp.com/EmbeddedPlayer/${embedId}/size=large/bgcol=f3eee3/linkcol=2140be/artwork=small/transparent=true/`
+    ? `https://bandcamp.com/EmbeddedPlayer/${embedId}/size=small/bgcol=f3eee3/linkcol=2140be/transparent=true/`
     : platform === 'soundcloud'
-      ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(embedId)}&color=%23e13d2b&show_teaser=false`
+      ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(embedId)}&color=%23e13d2b&visual=false&show_user=false&show_teaser=false`
       : platform === 'spotify'
         ? `https://open.spotify.com/embed/${embedId}?theme=0`
         : `https://embed.music.apple.com/${embedId}`;
 
 const height =
   platform === 'bandcamp'
-    ? 120
+    ? 42
     : platform === 'soundcloud'
-      ? 166
+      ? 20
       : platform === 'spotify'
-        ? 152
+        ? 80
         : 175;
 ---
 <iframe

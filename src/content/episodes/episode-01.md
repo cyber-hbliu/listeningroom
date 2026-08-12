@@ -51,7 +51,7 @@ picks:
     platform: bandcamp
     embedId: "album=703318280/track=274697845"
     link: "https://wewantsounds.bandcamp.com/album/disappointment-hateruma"
-   - artist: "Laila France"
+  - artist: "Laila France"
     release: "The Pink Song"
     platform: soundcloud
     embedId: "https://soundcloud.com/lailafrance/the-pink-song"

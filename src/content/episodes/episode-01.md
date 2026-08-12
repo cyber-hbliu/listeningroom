@@ -21,7 +21,7 @@ picks:
     platform: bandcamp
     embedId: "album=2186648450/tracklist=false/track=1015153358"
     link: "https://tenggerggb.bandcamp.com/album/sky"
-    - artist: "JJ Whitefield & Forced Meditation"
+  - artist: "JJ Whitefield & Forced Meditation"
     release: "Birth Of Consciousness"
     year: 2026
     platform: bandcamp

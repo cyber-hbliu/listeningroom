@@ -26,6 +26,7 @@ const fmt = (d: Date) =>
           </h2>
         </header>
         <p class="lede">{ep.data.intro}</p>
+
         {ep.data.picks.map((pick) => (
           <div class="pick">
             {pick.platform === 'soundcloud' && (
@@ -42,7 +43,7 @@ const fmt = (d: Date) =>
               </div>
               <div class="pick-side">
                 {pick.year && <span class="pick-year">{pick.year}</span>}
-                
+                <a
                   class="out-link"
                   href={pick.link}
                   aria-label={`Open ${pick.artist}, ${pick.release} on ${pick.platform}`}
@@ -53,6 +54,7 @@ const fmt = (d: Date) =>
         ))}
       </article>
     ))}
+
     <nav class="pager" aria-label="Episodes pagination">
       {page.url.next && <a href={page.url.next}>← Older episodes</a>}
       {page.url.prev && <a href={page.url.prev}>Newer episodes →</a>}

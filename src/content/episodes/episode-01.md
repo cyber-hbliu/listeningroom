@@ -5,8 +5,7 @@ intro: "I've been digging out albums and tracks for years, and I'm obsessed with
 picks:
   - artist: "TENGGER"
     release: "Sky"
-    note: "Your one or two lines on why you love it."
-    platform: bandcamp
+    note: "released July 10, 2026"
     embedId: "album=2186648450/tracklist=false/track=1015153358"
     link: "https://tenggerggb.bandcamp.com/album/sky"
 ---

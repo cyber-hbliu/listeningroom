@@ -10,7 +10,7 @@ const episodes = defineCollection({
       z.object({
         artist: z.string(),
         release: z.string(),
-        note: z.string().optional(),
+        year: z.number().int().optional(), // release year
         platform: z.enum(['bandcamp', 'soundcloud', 'spotify']),
         // bandcamp: "album=1234567890" or "track=1234567890"
         // soundcloud: full track/playlist URL

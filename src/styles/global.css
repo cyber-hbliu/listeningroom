@@ -270,7 +270,18 @@ h1, h2, h3 {
 }
 .out-link:hover { background: var(--pink); color: var(--ink); }
 
-.pick-note { margin: 0.4rem 0 0.8rem; max-width: 40rem; }
+.pick-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex: none;
+}
+.pick-year {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
 
 
 /* click-to-load cover */

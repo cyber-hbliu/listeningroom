@@ -29,7 +29,6 @@ const fmt = (d: Date) =>
 
         {ep.data.picks.map((pick) => (
           <div class="pick">
-            {pick.note && <p class="pick-note">{pick.note}</p>}
             <div class="pick-row">
               <div class="pick-embed">
                 <Player
@@ -39,11 +38,14 @@ const fmt = (d: Date) =>
                   release={pick.release}
                 />
               </div>
-              <a
-                class="out-link"
-                href={pick.link}
-                aria-label={`Open ${pick.artist}, ${pick.release} on ${pick.platform}`}
-              >↗</a>
+              <div class="pick-side">
+                {pick.year && <span class="pick-year">{pick.year}</span>}
+                <a
+                  class="out-link"
+                  href={pick.link}
+                  aria-label={`Open ${pick.artist}, ${pick.release} on ${pick.platform}`}
+                >↗</a>
+              </div>
             </div>
           </div>
         ))}

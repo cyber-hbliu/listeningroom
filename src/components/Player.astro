@@ -13,18 +13,18 @@ const { platform, embedId, artist, release } = Astro.props;
 
 const src =
   platform === 'bandcamp'
-    ? `https://bandcamp.com/EmbeddedPlayer/${embedId}/size=small/bgcol=f3eee3/linkcol=2140be/transparent=true/`
+    ? `https://bandcamp.com/EmbeddedPlayer/${embedId}/size=large/bgcol=f3eee3/linkcol=2140be/artwork=small/transparent=true/`
     : platform === 'soundcloud'
-      ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(embedId)}&color=%23e13d2b&visual=false&show_teaser=false&show_user=false`
+      ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(embedId)}&color=%23e13d2b&show_teaser=false`
       : platform === 'spotify'
         ? `https://open.spotify.com/embed/${embedId}?theme=0`
         : `https://embed.music.apple.com/${embedId}`;
 
 const height =
   platform === 'bandcamp'
-    ? 42
+    ? 120
     : platform === 'soundcloud'
-      ? 20
+      ? 166
       : platform === 'spotify'
         ? 152
         : 175;
